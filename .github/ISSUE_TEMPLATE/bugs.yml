@@ -1,0 +1,73 @@
+name: ⛓️‍💥 Report Bug
+description: Report an issue with existing solutions!
+title: "[Bug]: "
+labels: ["bug"]
+assignees: [alex-cuspire]
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        We'll get on the issue!
+        The more context you can provide, the easier it is for us to evaluate and prioritize.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: What is the issue that is occuring?
+      description: Tell us EXACTLY what is happening
+      placeholder: "When I launch the skip payment module...."
+    validations:
+      required: true
+
+  - type: textarea
+    id: value
+    attributes:
+      label: Expected value or benefit
+      description: How would success be measured? (time saved, cost reduced, revenue, member experience, etc.)
+      placeholder: "This would reduce manual work by..."
+    validations:
+      required: false
+
+  - type: dropdown
+    id: scopePeople
+    attributes:
+      label: Impact Scope
+      description: How many people are reporting / impacted by this?
+      options:
+        - One Person
+        - Some People
+        - Everyone
+    validations:
+      required: true
+
+  - type: dropdown
+    id: severity
+    attributes:
+      label: How critical is this issue?
+      description: Help us understand how bad this is
+      options:
+        - Nice To Have (Annoying, but no biggie)
+        - Standard
+        - Major Impact to Operations
+        - Work Stoppage- CRITICAL
+    validations:
+      required: true
+      
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Existing alternatives or workarounds
+      description: Are you using another tool, vendor, or manual process today?
+      placeholder: "Currently we handle this by..."
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional_context
+    attributes:
+      label: Additional context or links
+      description: Screenshots, mockups, vendor links, docs, or anything else helpful.
+      placeholder: "Links, screenshots, examples..."
+    validations:
+      required: false
