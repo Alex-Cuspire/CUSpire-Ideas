@@ -1,0 +1,99 @@
+name: 💡 Submit an Idea
+description: Propose a new idea, feature, or improvement
+title: "[Idea]: "
+labels: ["idea", "intake"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for sharing an idea!  
+        The more context you can provide, the easier it is for us to evaluate and prioritize.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem does this solve?
+      description: Describe the pain point or inefficiency you're seeing today.
+      placeholder: "Today, credit unions struggle with..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Proposed idea or solution
+      description: Your suggested approach (high-level is fine).
+      placeholder: "A potential solution could be..."
+    validations:
+      required: true
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Idea category
+      description: What type of idea is this?
+      options:
+        - New feature
+        - Enhancement to existing feature
+        - Integration
+        - Process / workflow improvement
+        - Documentation / education
+        - Other
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: impact_area
+    attributes:
+      label: Impact area
+      description: Who or what does this primarily impact?
+      options:
+        - label: Members
+        - label: Lending
+        - label: Operations
+        - label: IT / Technology
+        - label: Marketing / Growth
+        - label: Compliance / Risk
+
+  - type: dropdown
+    id: cu_size
+    attributes:
+      label: Credit union size (optional)
+      description: Rough asset size this idea is most relevant to.
+      options:
+        - Under $100M
+        - $100M – $500M
+        - $500M – $1B
+        - $1B+
+        - Not size-specific
+    validations:
+      required: false
+
+  - type: textarea
+    id: value
+    attributes:
+      label: Expected value or benefit
+      description: How would success be measured? (time saved, cost reduced, revenue, member experience, etc.)
+      placeholder: "This would reduce manual work by..."
+    validations:
+      required: false
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Existing alternatives or workarounds
+      description: Are you using another tool, vendor, or manual process today?
+      placeholder: "Currently we handle this by..."
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional_context
+    attributes:
+      label: Additional context or links
+      description: Screenshots, mockups, vendor links, docs, or anything else helpful.
+      placeholder: "Links, screenshots, examples..."
+    validations:
+      required: false
